@@ -11,7 +11,9 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+
 from local_settings import DEBUG
+from local_settings import USER_DB
 from local_settings import PASSWORD_DB
 from local_settings import ALLOWED_HOSTS
 
@@ -26,8 +28,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-a8pv!ksclng#ux216fn5*kky$+e$a4d9l5=ug0m6@c9l#v2)2t'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-
-
 
 # Application definition
 
@@ -80,7 +80,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'cf_medical',
-        'USER': 'root',
+        'USER': USER_DB,
         'PASSWORD': PASSWORD_DB,
         'HOST':'localhost',
         'PORT':'3306',
