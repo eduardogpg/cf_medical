@@ -1,5 +1,5 @@
 asgiref==3.6.0
-backports.zoneinfo==0.2.1
+backports.zoneinfo;python_version<"3.9"
 bcrypt==4.0.1
 cffi==1.15.1
 cryptography==39.0.0
